@@ -1,0 +1,22 @@
+services:
+  lingua:
+    build: .
+    image: lingua-localization-toolkit:local
+    user: "${LOCAL_UID:-10001}:${LOCAL_GID:-10001}"
+    command:
+      - check
+      - /input/en.json
+      - /input/qps-ploc.json
+      - --report
+      - /output/check.json
+    read_only: true
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=8m
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    network_mode: none
+    volumes:
+      - ./examples:/input:ro
+      - ./output:/output

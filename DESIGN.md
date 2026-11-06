@@ -18,7 +18,7 @@ a translation service or a claim of linguistic review.
 - A validation command compares a source bundle with a target bundle and emits a deterministic
   machine-readable report plus a concise human-readable summary.
 - A pseudo-localization command reads one bundle and writes a transformed JSON bundle without
-  modifying the source.
+  modifying the source, plus a `.meta.json` sidecar identifying it as pseudo-localized.
 - The example bundle and generated target use synthetic English strings and the pseudo-locale
   identifier `qps-ploc`; they are not real translations.
 
@@ -39,8 +39,8 @@ a translation service or a claim of linguistic review.
   eligible text by a configurable proportion bounded from 0 to 100%.
 - Preserve recognized named placeholders and simple HTML tags verbatim.
 - Produce stable output for identical input and options.
-- Mark the generated file as pseudo-localized in its metadata and documentation; never present it
-  as a translated locale.
+- Write a metadata sidecar identifying `qps-ploc`, the source filename, expansion setting, and
+  that the content is not a translation; never present it as a translated locale.
 
 ## Operational boundaries
 

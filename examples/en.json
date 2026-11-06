@@ -1,0 +1,12 @@
+{
+  "app": {
+    "title": "Welcome back",
+    "greeting": "Hello, {user_name}!",
+    "notice": "You have {count} new messages.",
+    "legal": "Read the <strong>privacy notice</strong>."
+  },
+  "actions": {
+    "save": "Save changes",
+    "cancel": "Cancel"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "expansion_percent": 30,
+  "format_version": 1,
+  "locale": "qps-ploc",
+  "notice": "Synthetic pseudo-localized strings; not a translation.",
+  "pseudo_localized": true,
+  "source": "en.json"
+}
